@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgb(176, 235, 170);
+  
+}
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "h h"
+    "n n"
+    "ar as"
+    "f f";
+    background-color: rgb(226, 221, 154);
+    gap: 10px;
+}
+
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: ar;
+    padding-left: 10px;
+}
+aside{
+    grid-area: as;
+    display:grid;
+    height: 100%;
+    grid-template-rows: auto  50px ;
+    padding-right: 10px;
+
+}
+footer{
+    grid-area: f;
+}
+
+section#utolsokepek{
+    display:grid ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px; 
+}
+
+div#kep{
+    padding:5px ;
+}
+
+.menu{
+    padding: 5px; 
+    
+    text-align:center ;/*középre igazit a kereten belül*/
+    background-color: rgb(245, 231, 211);
+   
+}
+
+.menu a{
+    text-decoration: none;/*leszedjük az aláhuzást*/
+    color: blue;
+   
+}
+
+
+.menu a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.menu li:hover{
+    padding: 10px;
+    background-color: rgb(2, 188, 245);
+}
+.menu li{
+    padding: 10px; 
+}
+
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr  1fr 1fr 5fr/*gombok egyásmellet milyen arányban*/
+}
+img{
+    width:100%; 
+    height:auto;
+    max-width:100%;
+}
+.doboz{
+    background-color: rgb(168, 226, 228);
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 60px auto 30px 30px;
+
+}
+
+h2{
+    text-align: center;/*vizszintesen középre*/
+    font-size: 20px;/*betüméret*/
+    align-self: center;/*fügülegesen középre*/
+
+}
+.szamla{
+    background-color: rgb(168, 226, 228);
+    padding: 10px;
+    border-bottom: 1px solid black ;
+   
+}
+p{
+    font-size: 15px;/*betüméret*/
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+ 
+}
+
+.szamalaalja{
+    display: grid;
+    background-color: rgb(168, 226, 228);
+}
+h4{
+    color: #453bd3;
+    text-align: center;
+
+}
+
+
+@media screen and (max-width:800px) {
+    section#utolsokepek{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    main{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "as"
+        "ar"
+        "f";
+    }
+    
+}
